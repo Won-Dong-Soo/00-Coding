@@ -1,0 +1,377 @@
+˜
+
+state_workaround
+*
+ €R
+var_24
+*
+ €¢Þ¢+
+$com.github.apple.coremltools.version9.0¢:
+,com.github.apple.coremltools.conversion_date
+2026-02-26¢3
+#com.github.apple.coremltools.sourcetorch==2.7.0¢:
++com.github.apple.coremltools.source_dialectTorchScript²‘¤
+main›
+&
+state_workaround
+
+
+CoreML5ç
+CoreML5Ûvar_24„
+const(
+ state_workaround_to_fp16_dtype_0
+*6
+name.
+&
+$""
+ state_workaround_to_fp16_dtype_0*
+val
+
+
+"
+fp16 
+const*
+net_0_weight_to_fp16
+
+
+@
+**
+name"
+
+"
+net_0_weight_to_fp16*?
+val8
+
+
+@
+*"
+@model_path/weights/weight.bin@‘
+const"
+net_0_bias_to_fp16
+
+
+
+@*(
+name 
+
+"
+net_0_bias_to_fp16*:
+val3
+
+
+
+@*#
+@model_path/weights/weight.bin€ž
+cast
+x
+
+state_workaround-
+dtype$
+"
+ state_workaround_to_fp16_dtype_0.
+state_workaround_to_fp16
+
+
+
+*
+name
+
+
+"
+cast_1Ã
+linear
+bias
+
+net_0_bias_to_fp16"
+weight
+
+net_0_weight_to_fp16!
+x
+
+state_workaround_to_fp16(
+linear_0_cast_fp16
+
+
+
+@*(
+name 
+
+"
+linear_0_cast_fp16u
+tanh
+x
+
+linear_0_cast_fp16'
+input_3_cast_fp16
+
+
+
+@*'
+name
+
+"
+input_3_cast_fp16£
+const+
+net_2_weight_to_fp16
+
+
+€
+@**
+name"
+
+"
+net_2_weight_to_fp16*A
+val:
+
+
+€
+@*#
+@model_path/weights/weight.binÀ”
+const#
+net_2_bias_to_fp16
+
+
+€*(
+name 
+
+"
+net_2_bias_to_fp16*<
+val5
+
+
+€*$
+@model_path/weights/weight.bin€‡½
+linear
+bias
+
+net_2_bias_to_fp16"
+weight
+
+net_2_weight_to_fp16
+x
+
+input_3_cast_fp16)
+linear_1_cast_fp16
+
+
+
+€*(
+name 
+
+"
+linear_1_cast_fp16v
+tanh
+x
+
+linear_1_cast_fp16(
+input_7_cast_fp16
+
+
+
+€*'
+name
+
+"
+input_7_cast_fp16¤
+const+
+net_4_weight_to_fp16
+
+
+@
+€**
+name"
+
+"
+net_4_weight_to_fp16*B
+val;
+
+
+@
+€*$
+@model_path/weights/weight.binÀ‰’
+const"
+net_4_bias_to_fp16
+
+
+
+@*(
+name 
+
+"
+net_4_bias_to_fp16*;
+val4
+
+
+
+@*$
+@model_path/weights/weight.bin€Š¼
+linear
+bias
+
+net_4_bias_to_fp16"
+weight
+
+net_4_weight_to_fp16
+x
+
+input_7_cast_fp16(
+linear_2_cast_fp16
+
+
+
+@*(
+name 
+
+"
+linear_2_cast_fp16q
+tanh
+x
+
+linear_2_cast_fp16%
+input_cast_fp16
+
+
+
+@*%
+name
+
+"
+input_cast_fp16¢
+const*
+net_6_weight_to_fp16
+
+
+
+@**
+name"
+
+"
+net_6_weight_to_fp16*A
+val:
+
+
+
+@*$
+@model_path/weights/weight.binÀ‹x
+const"
+net_6_bias_to_fp16
+
+
+
+*(
+name 
+
+"
+net_6_bias_to_fp16*!
+val
+
+
+
+
+
+:
+c1û´º
+linear
+bias
+
+net_6_bias_to_fp16"
+weight
+
+net_6_weight_to_fp16
+x
+
+input_cast_fp16(
+linear_3_cast_fp16
+
+
+
+*(
+name 
+
+"
+linear_3_cast_fp16U
+const
+var_22
+*
+name
+
+	"
+op_22*
+val
+
+
+
+ÿÿÿÿÿÿÿÿÿ‰
+softmax
+axis
+
+
+var_22
+x
+
+linear_3_cast_fp16&
+var_24_cast_fp16
+
+
+
+*%
+name
+
+"
+op_24_cast_fp16ƒ
+const(
+ var_24_cast_fp16_to_fp32_dtype_0
+*5
+name-
+%
+#"!
+op_24_cast_fp16_to_fp32_dtype_0*
+val
+
+
+"
+fp32Œ
+cast
+x
+
+var_24_cast_fp16-
+dtype$
+"
+ var_24_cast_fp16_to_fp32_dtype_0
+var_24
+
+
+*
+name
+
+
+"
+cast_0"å
+	buildInfo×"
+
+
+Ä"Á
+6
+!
+
+"
+coremltools-version
+	
+"
+9.0
+@
+)
+!
+"
+coremltools-component-torch
+
+	"
+2.7.0
+E
+(
+ 
+"
+coremltools-source-dialect
+
+"
+TorchScript

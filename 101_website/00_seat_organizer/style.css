@@ -1,0 +1,54 @@
+body {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-image: url('background.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+h1 {
+  background-color: #48d1ff; /* 파란색 배경 */
+  color: white;               /* 글자 색상 */
+  padding: 10px 20px;         /* 내부 여백 */
+  border-radius: 8px;         /* 모서리 둥글기 */
+  display: inline-block;      /* 글자 크기만큼만 배경 */
+}
+
+.controls {
+  margin: 10px 0;
+}
+
+input {
+  width: 60px;
+  margin: 0 5px;
+}
+
+button {
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: #48d1ff;
+  color: white;
+}
+
+button:hover {
+  background: #48d1ff;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+td {
+  border: 1px solid #333;
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  background: white;
+  font-weight: 500;
+}

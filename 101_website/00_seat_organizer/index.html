@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자리 랜덤 배치</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>자리 랜덤 배치 프로그램</h1>
+
+  <div class="controls">
+    <div></div>
+      <label>처음 번호: <input type="number" id="start" value="1"></label>
+      <label>끝 번호: <input type="number" id="end" value="26" min="2"></label>
+    </div>
+    <div>
+      <label>가로: <input type="number" id="cols" value="5" min="1"></label>
+      <label>세로: <input type="number" id="rows" value="6" min="1"></label>
+      <button id="generate">자리 배치하기</button>
+      <button id="shuffle">다시 섞기</button>
+    </div>
+  </div>
+
+  <div id="result"></div>
+  <div>
+    <p>
+      ©️ 2025 @wondongsoo All rights reserved.
+    </p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

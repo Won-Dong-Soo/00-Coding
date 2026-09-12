@@ -1,0 +1,44 @@
+DongsooResearchEngine/
+│
+├── main.py
+├── config.py
+├── requirements.txt
+│
+├── core/
+│   ├── database.py
+│   ├── models.py
+│   └── watcher.py
+│
+├── parsers/
+│   ├── pdf_parser.py
+│   ├── docx_parser.py
+│   ├── pptx_parser.py
+│   ├── xlsx_parser.py
+│   └── text_parser.py
+│
+├── search/
+│   ├── embedding_engine.py
+│   ├── bm25_engine.py
+│   ├── faiss_engine.py
+│   └── hybrid_search.py
+│
+├── rag/
+│   ├── retriever.py
+│   └── ollama_agent.py
+│
+├── graph/
+│   ├── knowledge_graph.py
+│   └── relationship_finder.py
+│
+├── ai/
+│   ├── topic_generator.py
+│   ├── contradiction_detector.py
+│   └── difficulty_estimator.py
+│
+├── ui/
+│   └── streamlit_app.py
+│
+└── data/
+    ├── database.db
+    ├── faiss.index
+    └── cache/

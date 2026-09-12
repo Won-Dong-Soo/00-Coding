@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEON DRIFT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div><span class="eyebrow">ARCADE // 01</span><h1>NEON DRIFT</h1></div>
+      <button id="sound" aria-label="사운드 켜기 또는 끄기">SOUND: ON</button>
+    </header>
+    <section class="game-wrap">
+      <canvas id="game" width="960" height="600" aria-label="네온 드리프트 게임"></canvas>
+      <div id="overlay" class="overlay">
+        <div class="card">
+          <p id="kicker">MIDNIGHT RUN</p>
+          <h2 id="title">빛 사이로<br>살아남으세요.</h2>
+          <p id="message">파편을 피하고 별을 모으세요. 위험할 땐 대시로 뚫고 나가세요.</p>
+          <button id="start">게임 시작 <span>↗</span></button>
+          <small>이동: 마우스 / WASD · 대시: SPACE / 클릭 · 일시정지: P</small>
+        </div>
+      </div>
+      <div class="hud">
+        <div><span>SCORE</span><strong id="score">0000</strong></div>
+        <div><span>COMBO</span><strong id="combo">×1</strong></div>
+        <div><span>DASH</span><strong id="dash">READY</strong></div>
+        <div><span>SHIELD</span><strong id="shield">—</strong></div>
+        <div><span>BEST</span><strong id="best">0000</strong></div>
+      </div>
+      <div id="pause" class="pause">PAUSED</div>
+    </section>
+    <footer><span>MOVE FAST. STAY BRIGHT.</span><span>© 2091 NIGHT DIVISION</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
