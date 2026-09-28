@@ -1,44 +1,51 @@
 #include <iostream>
-#include <string>
+#include <cmath>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-void dfs(int length, int& result) {
-    if (length == 0 || length == -2) {
-        result++;
-        cout << length << ' ' << result << endl;
-        return;
-    }
-    if (length == 1 || length == -1) {
-        result += 2;
-        cout << length << ' ' << result << endl;
-        return;
+bool isPrime(int n) {
+    if (n < 2) return false;
+
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
     }
 
-    for (int i = 0; i < 3; i++) {
-        if (i == 0 || i == 1) {
-            int next_length = length;
-            next_length--;
-            dfs(next_length, result);
-        }
-        if (i == 2) {
-            int next_length = length;
-            next_length -= 2;
-            dfs(next_length, result);
-        }
-    }
+    return true;
+}
+
+bool isSquare(long long n) {
+    if (n < 0) return false;
+
+    long long r = sqrtl(n);
+    return r * r == n || (r + 1) * (r + 1) == n;
 }
 
 int main() {
-    int length = 8;
-    int result = 0;
-    dfs(length, result);
-    cout << result << endl;
+    int lim;
+    cin >> lim;
 
-    // vertor<int> dp(length);
+    vector<int> answer;
+
+    for (int p = 7; p <= lim; p++) {
+        for (int q = 7; q <= lim; q++) {
+            if (isPrime(p) && isPrime(q) && p < q && q < 2*p+100) {
+                long long x = 1LL * p * p
+                            + 5LL * (q + 2) * p
+                            + 25;
+
+                if (isSquare(x)) {
+                    cout << p << " " << q << endl;
+                    answer.push_back(p);
+                }
+            }
+        }
+    }
+
+    if (!answer.empty()) {
+        cout << *max_element(answer.begin(), answer.end()) << endl;
+    }
 
     return 0;
 }
-
-// A -> B
-//
